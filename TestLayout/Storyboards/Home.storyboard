@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qdq-G5-SUb">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="HGx-pC-o9E">
+            <objects>
+                <viewController id="Qdq-G5-SUb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U9r-59-okF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33z-bz-dYw">
+                                <rect key="frame" x="170.5" y="437.5" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="33z-bz-dYw" firstAttribute="centerY" secondItem="U9r-59-okF" secondAttribute="centerY" id="AY2-JD-ghq"/>
+                            <constraint firstItem="33z-bz-dYw" firstAttribute="centerX" secondItem="U9r-59-okF" secondAttribute="centerX" id="nF6-Za-fGP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BjO-6J-9yI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="Home" id="kFL-dU-3Bb"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KpE-Lj-BDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Home" width="25" height="25"/>
+    </resources>
+</document>

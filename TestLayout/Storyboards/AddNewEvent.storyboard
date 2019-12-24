@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PTs-r4-qIh">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="loB-1P-Geu">
+            <objects>
+                <viewController id="PTs-r4-qIh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="27x-eg-6nK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AddNewEvent VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tE0-GV-uTC">
+                                <rect key="frame" x="139.5" y="437.5" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tE0-GV-uTC" firstAttribute="centerX" secondItem="27x-eg-6nK" secondAttribute="centerX" id="rvQ-SS-Ew5"/>
+                            <constraint firstItem="tE0-GV-uTC" firstAttribute="centerY" secondItem="27x-eg-6nK" secondAttribute="centerY" id="zGG-KC-aBD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dqo-Kl-YUB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="AddNewEvent" id="uLs-dK-FW2"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BgI-Eq-cck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="147"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AddNewEvent" width="25" height="25"/>
+    </resources>
+</document>
