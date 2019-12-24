@@ -20,6 +20,11 @@
 		31065C2B23AE0EB5003AF807 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31065C2A23AE0EB5003AF807 /* ProfileViewController.swift */; };
 		31065C2D23AE13B8003AF807 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31065C2C23AE13B8003AF807 /* EventModel.swift */; };
 		31065C3123AE15E6003AF807 /* CustomEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31065C3023AE15E6003AF807 /* CustomEventTableViewCell.swift */; };
+		31C2A7F823B204ED004C97B5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 31C2A7F723B204ED004C97B5 /* .gitignore */; };
+		31C2A81E23B26895004C97B5 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C2A81D23B26895004C97B5 /* MyEventsViewController.swift */; };
+		31C2A82023B26C5B004C97B5 /* MyRatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C2A81F23B26C5B004C97B5 /* MyRatingsViewController.swift */; };
+		31C2A82223B28563004C97B5 /* MyArchieveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C2A82123B28563004C97B5 /* MyArchieveViewController.swift */; };
+		31C2A82423B28717004C97B5 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C2A82323B28717004C97B5 /* ProfileModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		31065C2A23AE0EB5003AF807 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		31065C2C23AE13B8003AF807 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		31065C3023AE15E6003AF807 /* CustomEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEventTableViewCell.swift; sourceTree = "<group>"; };
+		31C2A7F723B204ED004C97B5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		31C2A81D23B26895004C97B5 /* MyEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
+		31C2A81F23B26C5B004C97B5 /* MyRatingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRatingsViewController.swift; sourceTree = "<group>"; };
+		31C2A82123B28563004C97B5 /* MyArchieveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArchieveViewController.swift; sourceTree = "<group>"; };
+		31C2A82323B28717004C97B5 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 		31065C0223AD6405003AF807 = {
 			isa = PBXGroup;
 			children = (
+				31C2A7F723B204ED004C97B5 /* .gitignore */,
 				31065C0D23AD6405003AF807 /* TestLayout */,
 				31065C0C23AD6405003AF807 /* Products */,
 			);
@@ -70,10 +81,10 @@
 		31065C0D23AD6405003AF807 /* TestLayout */ = {
 			isa = PBXGroup;
 			children = (
+				31C2A82523B2878A004C97B5 /* Models */,
 				31065C2F23AE1532003AF807 /* ViewControllers */,
 				31065C2E23AE14F7003AF807 /* Storyboards */,
 				31065C0E23AD6405003AF807 /* AppDelegate.swift */,
-				31065C2C23AE13B8003AF807 /* EventModel.swift */,
 				31065C1523AD6405003AF807 /* Assets.xcassets */,
 				31065C1A23AD6405003AF807 /* Info.plist */,
 			);
@@ -100,8 +111,20 @@
 				31065C1023AD6405003AF807 /* ViewController.swift */,
 				31065C2A23AE0EB5003AF807 /* ProfileViewController.swift */,
 				31065C3023AE15E6003AF807 /* CustomEventTableViewCell.swift */,
+				31C2A81D23B26895004C97B5 /* MyEventsViewController.swift */,
+				31C2A81F23B26C5B004C97B5 /* MyRatingsViewController.swift */,
+				31C2A82123B28563004C97B5 /* MyArchieveViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		31C2A82523B2878A004C97B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31065C2C23AE13B8003AF807 /* EventModel.swift */,
+				31C2A82323B28717004C97B5 /* ProfileModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +192,7 @@
 				31065C2523AE0359003AF807 /* AddNewEvent.storyboard in Resources */,
 				31065C1423AD6405003AF807 /* Main.storyboard in Resources */,
 				31065C2123AE02CE003AF807 /* Home.storyboard in Resources */,
+				31C2A7F823B204ED004C97B5 /* .gitignore in Resources */,
 				31065C2323AE0324003AF807 /* Favorites.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,9 +204,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C2A82423B28717004C97B5 /* ProfileModel.swift in Sources */,
 				31065C2B23AE0EB5003AF807 /* ProfileViewController.swift in Sources */,
+				31C2A82023B26C5B004C97B5 /* MyRatingsViewController.swift in Sources */,
+				31C2A81E23B26895004C97B5 /* MyEventsViewController.swift in Sources */,
 				31065C1123AD6405003AF807 /* ViewController.swift in Sources */,
 				31065C2D23AE13B8003AF807 /* EventModel.swift in Sources */,
+				31C2A82223B28563004C97B5 /* MyArchieveViewController.swift in Sources */,
 				31065C0F23AD6405003AF807 /* AppDelegate.swift in Sources */,
 				31065C3123AE15E6003AF807 /* CustomEventTableViewCell.swift in Sources */,
 			);

@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var profilePersonName: UILabel!
+    @IBOutlet weak var profilePersonAvatarImage: UIImageView!
     
+    @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var myEvents: UIButton!
     @IBOutlet weak var myRatings: UIButton!
-    
-    
-    
     
     @IBOutlet weak var purpleViewMyEvent: UIView!
     @IBOutlet weak var viewMyRatings: UIView! {
@@ -30,21 +30,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBOutlet weak var tableView: UITableView!
-    
-    let events = [Event(humanName: "Евгений Косынка",
-                       humanImage: #imageLiteral(resourceName: "Avatar_cat"),
-                       titleName: "Прогулка по Питеру вчетвером ночью",
-                       image: #imageLiteral(resourceName: "eventImage"),
-                       time: "13 октября - 20:00",
-                       address: "Александровский парк",
-                       keywords: nil),
-                  Event(humanName: "Евгений Косынка",
-                        humanImage: #imageLiteral(resourceName: "Avatar_cat"),
-                        titleName: "Прогулка по Питеру вчетвером ночью",
-                        image: #imageLiteral(resourceName: "eventImage"),
-                        time: "13 октября - 20:00",
-                        address: "Александровский парк",
-                        keywords: nil)]
 
     @IBOutlet weak var profileImage: UIImageView! {
         didSet {
@@ -52,6 +37,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             profileImage.clipsToBounds = true
         }
     }
+    
+    let personProfile = PersonProfile(name: "Жора",
+                                      secondname: "Крыжовников",
+                                      avatarImage: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,52 +50,57 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func setupScreen() {
         profileImage.image = #imageLiteral(resourceName: "Avatar_cat")
+        profilePersonName.text = personProfile.name + " " + personProfile.secondname
         
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomEventTableViewCell
-        
-        cell.creatorImage.image = events[indexPath.row].humanImage
-        cell.creatorName.text = events[indexPath.row].humanName
-        cell.eventImage.image = events[indexPath.row].image
-        cell.eventTime.text = events[indexPath.row].time
-        cell.eventTitleName.text = events[indexPath.row].titleName
-        cell.eventPlace.text = events[indexPath.row].address
-        
-        return cell
-        
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
     
     @IBAction func myEventsButton(_ sender: Any) {
-        tableView.isHidden = false
         purpleViewMyEvent.isHidden = false
         viewMyRatings.isHidden = true
         viewMyArchieve.isHidden = true
+        
+        guard let childVC = self.storyboard?.instantiateViewController(withIdentifier: "myEvents") as? MyEventsViewController else { return }
+        
+        addChild(childVC)
+        childVC.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        childVC.view.frame = profileView.bounds
+        
+        profileView.addSubview(childVC.view)
+        childVC.didMove(toParent: self)
+        
     }
     
     @IBAction func myRatingsButton(_ sender: Any) {
-        tableView.isHidden = true
         purpleViewMyEvent.isHidden = true
         viewMyRatings.isHidden = false
         viewMyArchieve.isHidden = true
+        
+        guard let childVC = self.storyboard?.instantiateViewController(withIdentifier: "myRatings") as? MyRatingsViewController else { return }
+        
+        addChild(childVC)
+        childVC.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        childVC.view.frame = profileView.bounds
+        
+        profileView.addSubview(childVC.view)
+        childVC.didMove(toParent: self)
+        
     }
     
     @IBAction func myArchieveButton(_ sender: Any) {
-        tableView.isHidden = true
         purpleViewMyEvent.isHidden = true
         viewMyRatings.isHidden = true
         viewMyArchieve.isHidden = false
+        
+        guard let childVC = self.storyboard?.instantiateViewController(withIdentifier: "myArchieve") as? MyArchieveViewController else { return }
+        
+        addChild(childVC)
+        childVC.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        childVC.view.frame = profileView.bounds
+        
+        profileView.addSubview(childVC.view)
+        childVC.didMove(toParent: self)
+        
     }
+    
 }
 
