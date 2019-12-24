@@ -49,5 +49,9 @@ extension MyRatingsViewController: UITableViewDataSource, UITableViewDelegate {
         return "Позитивные"
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     
 }
